@@ -1,0 +1,21 @@
+{
+  "name": "@itrulia/state-utility",
+  "version": "0.0.0",
+  "description": "State utlity library for ngrx",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "ngrx",
+    "state",
+    "utility"
+  ],
+  "author": "Karl Merkli <karlmerkli@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@ngrx/effects": "^4.0.0",
+    "@ngrx/store": "^4.0.0",
+    "reselect": "^3.0.1"
+  }
+}
