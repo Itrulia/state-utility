@@ -1,5 +1,3 @@
-import {Action} from "@ngrx/store";
-import {createSelector} from "reselect"
 import {ErrorState} from "../error";
 
 // State
@@ -27,43 +25,6 @@ export const setToLoading = <T>(state: LoadingState): LoadingState => {
     }
 };
 
-
-// Actions
-
-/**
- * Action to start loading an entity.
- * This action is used when there can be only one entity.
- * E.g. logged in user.
- */
-export interface LoadAction extends Action {}
-
-/**
- * Action to complete the loading of an entity.
- * This action is used when there can be only one entity.
- * E.g. logged in user.
- */
-export interface LoadCompleteAction<T> extends Action {
-    payload: T;
-    error?: ErrorState;
-}
-
-/**
- * Action to start loading one entity of many.
- * This action is used when there can be more than one entity.
- * E.g. loading one user.
- */
-export interface LoadMultipleAction extends Action {
-    id: string;
-}
-
-/**
- * Action to complete the loading of one of many entities.
- * This action is used when there can be more than one entity.
- * E.g. loading one user.
- */
-export interface LoadMultipleCompleteAction<T> extends LoadCompleteAction<T> {
-    id: string;
-}
 
 // Selectors
 

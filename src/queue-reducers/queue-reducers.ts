@@ -6,6 +6,6 @@ import {ActionReducer, Action} from "@ngrx/store";
  *
  * @param reducers
  */
-export const queueReducers = <T>(reducers: ActionReducer<T>[]): ActionReducer<T> => {
+export const reduceReducers = <T>(reducers: ActionReducer<T>[]): ActionReducer<T> => {
     return (state: T, action: Action) => reducers.reduce((newState, reducer) => reducer(newState, action), state);
 };
